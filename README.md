@@ -11,7 +11,7 @@ O projeto é construído **apenas com HTML e CSS** — sem JavaScript, sem frame
 Aplicar na prática os conteúdos de HTML semântico e CSS:
 
 - estrutura semântica (`header`, `nav`, `main`, `section`, `article`, `footer`);
-- estilização com CSS externo (um arquivo `.css` por página);
+- estilização com um único arquivo CSS externo, compartilhado por todas as páginas;
 - variáveis CSS (`:root`), Flexbox, CSS Grid e pseudo-elementos;
 - layout responsivo com *media queries*;
 - acessibilidade básica (contraste, `alt`, foco visível, `lang="pt-BR"`).
@@ -26,32 +26,36 @@ Livraria-Cafe-com-Cha/
 ├── best-sellers.html       # Mais vendidos
 ├── recomendacoes.html      # Recomendações da Casa
 ├── css/
-│   ├── index.css           # Estilo da Home
-│   ├── best-sellers.css    # Estilo da página de Mais Vendidos
-│   └── recomendacoes.css   # Estilo da página de Recomendações
+│   └── estilo.css          # CSS único, compartilhado por todas as páginas
 └── README.md
 ```
 
-Cada página tem **seu próprio arquivo HTML e seu próprio arquivo CSS**, para que as
-partes possam ser desenvolvidas separadamente e unidas no final sem conflitos.
+Todas as páginas usam **o mesmo arquivo CSS** (`css/estilo.css`), para que o
+site fique visualmente igual do início ao fim. O arquivo é organizado em
+seções numeradas (variáveis, cabeçalho, botões, cada página, responsivo) para
+facilitar encontrar e editar uma parte sem mexer nas outras.
 
 ---
 
 ## 👥 Divisão das tarefas
 
-| Página | Arquivos | Responsável |
+| Página | Arquivo HTML | Responsável |
 | --- | --- | --- |
-| Home | `index.html` + `css/index.css` | Colega de equipe |
-| Mais Vendidos | `best-sellers.html` + `css/best-sellers.css` | Eduardo Lopes |
-| Recomendações da Casa | `recomendacoes.html` + `css/recomendacoes.css` | Eduardo Lopes |
+| Home | `index.html` | Colega de equipe |
+| Mais Vendidos | `best-sellers.html` | Eduardo Lopes |
+| Recomendações da Casa | `recomendacoes.html` | Eduardo Lopes |
+
+O CSS (`css/estilo.css`) é compartilhado — qualquer alteração nele afeta
+todas as páginas ao mesmo tempo, então vale avisar no grupo antes de mexer
+nas seções que não são só suas.
 
 ---
 
-## 🎨 Identidade visual (padrão para todas as páginas)
+## 🎨 Identidade visual
 
-Para que as páginas fiquem consistentes depois de unidas, todas usam a mesma
-paleta e a mesma tipografia. Basta copiar o bloco `:root` abaixo no início do CSS
-de cada página.
+Como o CSS é único, a paleta e a tipografia já são as mesmas em todas as
+páginas automaticamente — não precisa copiar nada. As variáveis ficam no
+topo de `css/estilo.css`, dentro do bloco `:root`:
 
 ```css
 :root {
@@ -86,6 +90,13 @@ depender de internet).
   <a href="recomendacoes.html">Recomendações da Casa</a>
 </nav>
 ```
+
+Na página em que o link estiver ativo, adicione `class="menu__ativo"` a ele
+(ex.: `<a href="index.html" class="menu__ativo">Início</a>` na home).
+
+> ⚠️ Para a home entrar no mesmo padrão, o `<head>` de `index.html` também
+> precisa carregar o CSS único do projeto:
+> `<link rel="stylesheet" href="css/estilo.css">`
 
 ---
 
