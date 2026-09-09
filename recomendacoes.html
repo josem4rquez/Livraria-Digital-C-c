@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendações da Casa | Livraria Café com Chá</title>
+  <meta name="description" content="Os livros escolhidos a dedo pela equipe da Livraria Café com Chá, com sugestão de bebida para acompanhar.">
+  <link rel="stylesheet" href="css/recomendacoes.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="cabecalho__conteudo">
+      <a class="logo" href="index.html">
+        <span class="logo__icone" aria-hidden="true">🍵</span>
+        <span class="logo__texto">
+          <strong>Livraria</strong>
+          Café com Chá
+        </span>
+      </a>
+
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="best-sellers.html">Mais Vendidos</a>
+        <a href="recomendacoes.html" class="menu__ativo" aria-current="page">Recomendações da Casa</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======================= ABERTURA ======================= -->
+    <section class="abertura">
+      <div class="abertura__texto">
+        <p class="abertura__etiqueta">Escolhas da equipe</p>
+        <h1 class="abertura__titulo">Recomendações<br>da Casa</h1>
+        <p class="abertura__resumo">
+          Aqui não entra livro por número de vendas. Entra o que a gente leu,
+          gostou e ficou com vontade de contar para alguém. Cada indicação vem
+          assinada por quem leu — e com a bebida que combina com ela.
+        </p>
+        <a class="botao botao--destaque" href="#selecao">Ver a seleção do mês</a>
+      </div>
+
+      <div class="abertura__xicara" aria-hidden="true">
+        <div class="xicara">
+          <div class="xicara__vapor"></div>
+          <div class="xicara__corpo"></div>
+          <div class="xicara__pires"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SELEÇÃO DO MÊS ======================= -->
+    <section class="selecao" id="selecao" aria-labelledby="titulo-selecao">
+      <h2 id="titulo-selecao" class="secao__titulo">A seleção do mês</h2>
+      <p class="secao__subtitulo">
+        Quatro leituras separadas pela equipe, com um bilhete de quem indicou.
+      </p>
+
+      <article class="indicacao">
+        <div class="capa capa--vinho" aria-hidden="true">
+          <span class="capa__titulo">Enquanto a Água Ferve</span>
+          <span class="capa__autor">T. Amaral</span>
+        </div>
+
+        <div class="indicacao__texto">
+          <span class="indicacao__genero">Romance de formação</span>
+          <h3 class="indicacao__titulo">Enquanto a Água Ferve</h3>
+          <p class="indicacao__autor">Teresa Amaral · 248 páginas</p>
+          <p class="indicacao__sinopse">
+            Uma menina aprende a fazer chá com a avó e, sem perceber, aprende
+            também a se despedir. É um livro pequeno que atrasa a leitura de
+            propósito: cada capítulo termina com uma receita.
+          </p>
+
+          <blockquote class="bilhete">
+            <p>
+              “Li em duas tardes e chorei nas duas. Se você gosta de história
+              de família contada devagar, é esse.”
+            </p>
+            <footer class="bilhete__assinatura">
+              <span class="bilhete__avatar" aria-hidden="true">CL</span>
+              <span>
+                <strong>Clara Lemos</strong>
+                livreira · setor de literatura
+              </span>
+            </footer>
+          </blockquote>
+
+          <p class="indicacao__rodape">
+            <span class="preco">R$ 48,00</span>
+            <a class="botao" href="#">Reservar exemplar</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="indicacao indicacao--invertida">
+        <div class="capa capa--verde" aria-hidden="true">
+          <span class="capa__titulo">O Mapa dos Dias Lentos</span>
+          <span class="capa__autor">I. Corrêa</span>
+        </div>
+
+        <div class="indicacao__texto">
+          <span class="indicacao__genero">Ensaio</span>
+          <h3 class="indicacao__titulo">O Mapa dos Dias Lentos</h3>
+          <p class="indicacao__autor">Ivo Corrêa · 192 páginas</p>
+          <p class="indicacao__sinopse">
+            Um convite a fazer menos coisas por dia. O autor passou um ano sem
+            pressa e anotou o que descobriu — inclusive que ler em pé, no ônibus,
+            também conta.
+          </p>
+
+          <blockquote class="bilhete">
+            <p>
+              “Deixo sempre um exemplar aberto no balcão. Já perdi a conta de
+              quantos clientes leram uma página e levaram o livro.”
+            </p>
+            <footer class="bilhete__assinatura">
+              <span class="bilhete__avatar" aria-hidden="true">RM</span>
+              <span>
+                <strong>Rui Matos</strong>
+                barista · turno da manhã
+              </span>
+            </footer>
+          </blockquote>
+
+          <p class="indicacao__rodape">
+            <span class="preco">R$ 52,90</span>
+            <a class="botao" href="#">Reservar exemplar</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="indicacao">
+        <div class="capa capa--azul" aria-hidden="true">
+          <span class="capa__titulo">Noite de Feira</span>
+          <span class="capa__autor">N. Bastos</span>
+        </div>
+
+        <div class="indicacao__texto">
+          <span class="indicacao__genero">Contos</span>
+          <h3 class="indicacao__titulo">Noite de Feira</h3>
+          <p class="indicacao__autor">Nélson Bastos · 176 páginas</p>
+          <p class="indicacao__sinopse">
+            Doze contos que acontecem todos na mesma madrugada, na mesma feira
+            livre. Personagens que se cruzam sem se reconhecer — e o leitor
+            reconhecendo todos eles.
+          </p>
+
+          <blockquote class="bilhete">
+            <p>
+              “Melhor livro para quem diz que não tem tempo de ler: cada conto
+              cabe numa pausa para o café.”
+            </p>
+            <footer class="bilhete__assinatura">
+              <span class="bilhete__avatar" aria-hidden="true">AS</span>
+              <span>
+                <strong>Alice Souto</strong>
+                curadora do clube de leitura
+              </span>
+            </footer>
+          </blockquote>
+
+          <p class="indicacao__rodape">
+            <span class="preco">R$ 41,50</span>
+            <a class="botao" href="#">Reservar exemplar</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="indicacao indicacao--invertida">
+        <div class="capa capa--laranja" aria-hidden="true">
+          <span class="capa__titulo">Herbário Imaginário</span>
+          <span class="capa__autor">P. Ventura</span>
+        </div>
+
+        <div class="indicacao__texto">
+          <span class="indicacao__genero">Fantasia ilustrada</span>
+          <h3 class="indicacao__titulo">Herbário Imaginário</h3>
+          <p class="indicacao__autor">Paula Ventura · 320 páginas</p>
+          <p class="indicacao__sinopse">
+            Um catálogo de plantas que não existem, cada uma com sua lenda e sua
+            infusão. Bonito de ler e mais bonito ainda de folhear na mesa do
+            fundo, perto da janela.
+          </p>
+
+          <blockquote class="bilhete">
+            <p>
+              “Comprei um para presentear e acabei ficando com ele. Já avisei
+              que vou comprar outro — algum dia.”
+            </p>
+            <footer class="bilhete__assinatura">
+              <span class="bilhete__avatar" aria-hidden="true">GT</span>
+              <span>
+                <strong>Gabriel Tavares</strong>
+                atendimento · turno da tarde
+              </span>
+            </footer>
+          </blockquote>
+
+          <p class="indicacao__rodape">
+            <span class="preco">R$ 89,90</span>
+            <a class="botao" href="#">Reservar exemplar</a>
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ======================= HARMONIZAÇÕES ======================= -->
+    <section class="harmonizacao" aria-labelledby="titulo-harmonizacao">
+      <div class="harmonizacao__interno">
+        <h2 id="titulo-harmonizacao" class="secao__titulo secao__titulo--claro">Livro com bebida</h2>
+        <p class="secao__subtitulo secao__subtitulo--claro">
+          Combinações que a casa serve há anos. Peça no balcão pelo nome do combo.
+        </p>
+
+        <div class="combos">
+          <article class="combo">
+            <span class="combo__icone" aria-hidden="true">☕</span>
+            <h3 class="combo__titulo">Mistério &amp; Espresso</h3>
+            <p class="combo__texto">
+              Livro de suspense curto + espresso duplo. Para quem quer virar as
+              páginas rápido e não sair da cadeira.
+            </p>
+            <p class="combo__preco">R$ 12,00 <span>com o livro do mês</span></p>
+          </article>
+
+          <article class="combo">
+            <span class="combo__icone" aria-hidden="true">🍵</span>
+            <h3 class="combo__titulo">Poesia &amp; Chá Verde</h3>
+            <p class="combo__texto">
+              Uma xícara que rende três releituras. Serve bem para os livros que
+              a gente lê sem começar pelo começo.
+            </p>
+            <p class="combo__preco">R$ 10,50 <span>refil por R$ 4,00</span></p>
+          </article>
+
+          <article class="combo">
+            <span class="combo__icone" aria-hidden="true">🥐</span>
+            <h3 class="combo__titulo">Crônica &amp; Café com Leite</h3>
+            <p class="combo__texto">
+              O combo da manhã: crônicas leves, café com leite e um croissant
+              da padaria da esquina.
+            </p>
+            <p class="combo__preco">R$ 18,90 <span>até as 11h</span></p>
+          </article>
+
+          <article class="combo">
+            <span class="combo__icone" aria-hidden="true">🌙</span>
+            <h3 class="combo__titulo">Fantasia &amp; Chá de Camomila</h3>
+            <p class="combo__texto">
+              Para as últimas horas da loja, quando as luzes baixam e a leitura
+              continua até o fechamento.
+            </p>
+            <p class="combo__preco">R$ 11,00 <span>após as 19h</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CLUBE DE LEITURA ======================= -->
+    <section class="clube" aria-labelledby="titulo-clube">
+      <h2 id="titulo-clube" class="secao__titulo">Clube de leitura da casa</h2>
+      <p class="secao__subtitulo">
+        Encontros gratuitos na mesa grande do fundo. Basta aparecer com o livro lido — ou quase.
+      </p>
+
+      <ul class="agenda">
+        <li class="agenda__item">
+          <div class="agenda__data">
+            <span class="agenda__dia">12</span>
+            <span class="agenda__mes">Set</span>
+          </div>
+          <div class="agenda__info">
+            <h3>Enquanto a Água Ferve</h3>
+            <p>Quinta, 19h30 · mediação de Clara Lemos</p>
+          </div>
+          <span class="agenda__estado agenda__estado--aberto">Vagas abertas</span>
+        </li>
+
+        <li class="agenda__item">
+          <div class="agenda__data">
+            <span class="agenda__dia">26</span>
+            <span class="agenda__mes">Set</span>
+          </div>
+          <div class="agenda__info">
+            <h3>Noite de Feira</h3>
+            <p>Quinta, 19h30 · mediação de Alice Souto</p>
+          </div>
+          <span class="agenda__estado agenda__estado--poucas">Últimas vagas</span>
+        </li>
+
+        <li class="agenda__item">
+          <div class="agenda__data">
+            <span class="agenda__dia">10</span>
+            <span class="agenda__mes">Out</span>
+          </div>
+          <div class="agenda__info">
+            <h3>O Mapa dos Dias Lentos</h3>
+            <p>Quinta, 19h30 · mediação de Rui Matos</p>
+          </div>
+          <span class="agenda__estado agenda__estado--aberto">Vagas abertas</span>
+        </li>
+
+        <li class="agenda__item">
+          <div class="agenda__data">
+            <span class="agenda__dia">24</span>
+            <span class="agenda__mes">Out</span>
+          </div>
+          <div class="agenda__info">
+            <h3>Herbário Imaginário</h3>
+            <p>Quinta, 19h30 · encontro com a autora</p>
+          </div>
+          <span class="agenda__estado agenda__estado--esgotado">Lotado</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ======================= NEWSLETTER ======================= -->
+    <section class="assinatura" aria-labelledby="titulo-assinatura">
+      <h2 id="titulo-assinatura">Receba a indicação da semana</h2>
+      <p>
+        Um e-mail por semana, com um livro e uma bebida para acompanhar.
+        Sem spam — palavra de livreiro.
+      </p>
+
+      <form class="formulario" action="#" method="post">
+        <label class="formulario__label" for="email">Seu melhor e-mail</label>
+        <div class="formulario__linha">
+          <input class="formulario__campo" type="email" id="email" name="email"
+                 placeholder="nome@email.com" required>
+          <button class="botao botao--destaque" type="submit">Quero receber</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape__conteudo">
+      <div class="rodape__bloco">
+        <h3>Livraria Café com Chá</h3>
+        <p>Rua das Acácias, 128 — Centro<br>Aberto de terça a domingo, das 9h às 21h.</p>
+      </div>
+      <div class="rodape__bloco">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="best-sellers.html">Mais Vendidos</a></li>
+          <li><a href="recomendacoes.html">Recomendações da Casa</a></li>
+        </ul>
+      </div>
+      <div class="rodape__bloco">
+        <h3>Contato</h3>
+        <p>contato@cafecomcha.com.br<br>(11) 4002-8922</p>
+      </div>
+    </div>
+    <p class="rodape__creditos">
+      Projeto acadêmico da disciplina de Desenvolvimento Front-end — feito só com HTML e CSS.
+    </p>
+  </footer>
+
+</body>
+</html>

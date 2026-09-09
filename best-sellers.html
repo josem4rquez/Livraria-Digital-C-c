@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mais Vendidos | Livraria Café com Chá</title>
+  <meta name="description" content="Os livros mais vendidos da Livraria Café com Chá neste mês.">
+  <link rel="stylesheet" href="css/best-sellers.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="cabecalho__conteudo">
+      <a class="logo" href="index.html">
+        <span class="logo__icone" aria-hidden="true">☕</span>
+        <span class="logo__texto">
+          <strong>Livraria</strong>
+          Café com Chá
+        </span>
+      </a>
+
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="best-sellers.html" class="menu__ativo" aria-current="page">Mais Vendidos</a>
+        <a href="recomendacoes.html">Recomendações da Casa</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======================= HERO ======================= -->
+    <section class="hero">
+      <p class="hero__etiqueta">Ranking de setembro</p>
+      <h1 class="hero__titulo">Os Mais Vendidos</h1>
+      <p class="hero__texto">
+        Os dez títulos que mais saíram das nossas prateleiras no último mês,
+        contados um a um pelo balcão do café. Ranking atualizado toda
+        primeira segunda-feira.
+      </p>
+
+      <ul class="hero__numeros">
+        <li><strong>1.248</strong><span>livros vendidos</span></li>
+        <li><strong>10</strong><span>títulos no ranking</span></li>
+        <li><strong>4</strong><span>estreias da semana</span></li>
+      </ul>
+    </section>
+
+    <!-- ==================== PÓDIO (TOP 3) ==================== -->
+    <section class="podio" aria-labelledby="titulo-podio">
+      <h2 id="titulo-podio" class="secao__titulo">O pódio do mês</h2>
+      <p class="secao__subtitulo">Os três campeões de venda, com direito a lugar de honra na vitrine.</p>
+
+      <div class="podio__lista">
+
+        <article class="destaque destaque--prata">
+          <div class="destaque__posicao">2º</div>
+          <div class="capa capa--verde" aria-hidden="true">
+            <span class="capa__titulo">A Casa das Cem Janelas</span>
+            <span class="capa__autor">M. Albuquerque</span>
+          </div>
+          <h3 class="destaque__titulo">A Casa das Cem Janelas</h3>
+          <p class="destaque__autor">Mariana Albuquerque</p>
+          <p class="destaque__genero">Romance contemporâneo</p>
+          <p class="destaque__preco">R$ 54,90</p>
+          <p class="destaque__vendas">217 exemplares</p>
+        </article>
+
+        <article class="destaque destaque--ouro">
+          <div class="destaque__posicao">1º</div>
+          <span class="selo">Campeão de vendas</span>
+          <div class="capa capa--vinho" aria-hidden="true">
+            <span class="capa__titulo">O Silêncio das Xícaras</span>
+            <span class="capa__autor">R. Nogueira</span>
+          </div>
+          <h3 class="destaque__titulo">O Silêncio das Xícaras</h3>
+          <p class="destaque__autor">Rafael Nogueira</p>
+          <p class="destaque__genero">Mistério</p>
+          <p class="destaque__preco">R$ 62,00</p>
+          <p class="destaque__vendas">338 exemplares</p>
+        </article>
+
+        <article class="destaque destaque--bronze">
+          <div class="destaque__posicao">3º</div>
+          <div class="capa capa--azul" aria-hidden="true">
+            <span class="capa__titulo">Cartas para o Inverno</span>
+            <span class="capa__autor">L. Ferraz</span>
+          </div>
+          <h3 class="destaque__titulo">Cartas para o Inverno</h3>
+          <p class="destaque__autor">Letícia Ferraz</p>
+          <p class="destaque__genero">Poesia</p>
+          <p class="destaque__preco">R$ 39,90</p>
+          <p class="destaque__vendas">186 exemplares</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==================== TOP 10 ==================== -->
+    <section class="ranking" aria-labelledby="titulo-ranking">
+      <h2 id="titulo-ranking" class="secao__titulo">Top 10 completo</h2>
+      <p class="secao__subtitulo">Do primeiro ao décimo lugar, com preço de balcão e número de exemplares vendidos.</p>
+
+      <ol class="ranking__lista">
+
+        <li class="livro">
+          <span class="livro__posicao">01</span>
+          <div class="capa capa--vinho capa--pequena" aria-hidden="true">
+            <span class="capa__titulo">O Silêncio das Xícaras</span>
+            <span class="capa__autor">R. Nogueira</span>
+          </div>
+          <div class="livro__info">
+            <h3 class="livro__titulo">O Silêncio das Xícaras</h3>
+            <p class="livro__autor">Rafael Nogueira</p>
+            <p class="livro__resumo">
+              Uma cafeteria de bairro guarda o segredo de um desaparecimento antigo.
+              Suspense lento, na medida certa para uma tarde chuvosa.
+            </p>
+            <p class="livro__tags">
+              <span class="tag">Mistério</span>
+              <span class="tag tag--verde">4 semanas em 1º</span>
+            </p>
+          </div>
+          <div class="livro__compra">
+            <p class="livro__preco">R$ 62,00</p>
+            <p class="livro__vendas">338 vendidos</p>
+            <a class="botao" href="#">Ver detalhes</a>
+          </div>
+        </li>
+
+        <li class="livro">
+          <span class="livro__posicao">02</span>
+          <div class="capa capa--verde capa--pequena" aria-hidden="true">
+            <span class="capa__titulo">A Casa das Cem Janelas</span>
+            <span class="capa__autor">M. Albuquerque</span>
+          </div>
+          <div class="livro__info">
+            <h3 class="livro__titulo">A Casa das Cem Janelas</h3>
+            <p class="livro__autor">Mariana Albuquerque</p>
+            <p class="livro__resumo">
+              Três gerações de uma família dividem o mesmo sobrado e nenhuma
+              delas conta a mesma versão da história.
+            </p>
+            <p class="livro__tags">
+              <span class="tag">Romance</span>
+              <span class="tag">Nacional</span>
+            </p>
+          </div>
+          <div class="livro__compra">
+            <p class="livro__preco">R$ 54,90</p>
+            <p class="livro__vendas">217 vendidos</p>
+            <a class="botao" href="#">Ver detalhes</a>
+          </div>
+        </li>
+
+        <li class="livro">
+          <span class="livro__posicao">03</span>
+          <div class="capa capa--azul capa--pequena" aria-hidden="true">
+            <span class="capa__titulo">Cartas para o Inverno</span>
+            <span class="capa__autor">L. Ferraz</span>
+          </div>
+          <div class="livro__info">
+            <h3 class="livro__titulo">Cartas para o Inverno</h3>
+            <p class="livro__autor">Letícia Ferraz</p>
+            <p class="livro__resumo">
+              Reunião de poemas curtos escritos durante um ano inteiro de
+              madrugadas frias. O queridinho do clube de leitura.
+            </p>
+            <p class="livro__tags">
+              <span class="tag">Poesia</span>
+              <span class="tag tag--verde">Edição especial</span>
+            </p>
+          </div>
+          <div class="livro__compra">
+            <p class="livro__preco">R$ 39,90</p>
+            <p class="livro__vendas">186 vendidos</p>
+            <a class="botao" href="#">Ver detalhes</a>
+          </div>
+        </li>
+
+        <li class="livro">
+          <span class="livro__posicao">04</span>
+          <div class="capa capa--laranja capa--pequena" aria-hidden="true">
+            <span class="capa__titulo">Manual do Café Perfeito</span>
+            <span class="capa__autor">B. Tanaka</span>
+          </div>
+          <div class="livro__info">
+            <h3 class="livro__titulo">Manual do Café Perfeito</h3>
+            <p class="livro__autor">Bruno Tanaka</p>
+            <p class="livro__resumo">
+              Da moagem ao último gole: um guia ilustrado de métodos de preparo
+              escrito por um barista campeão.
+            </p>
+            <p class="livro__tags">
+              <span class="tag">Gastronomia</span>
+              <span class="tag">Ilustrado</span>
+            </p>
+          </div>
+          <div class="livro__compra">
+            <p class="livro__preco">R$ 78,50</p>
+            <p class="livro__vendas">164 vendidos</p>
+            <a class="botao" href="#">Ver detalhes</a>
+          </div>
+        </li>
+
+        <li class="livro">
+          <span class="livro__posicao">05</span>
+          <div class="capa capa--roxo capa--pequena" aria-hidden="true">
+            <span class="capa__titulo">O Jardim de Vidro</span>
+            <span class="capa__autor">C. Medeiros</span>
+          </div>
+          <div class="livro__info">
+            <h3 class="livro__titulo">O Jardim de Vidro</h3>
+            <p class="livro__autor">Camila Medeiros</p>
+            <p class="livro__resumo">
+              Fantasia brasileira em que as plantas de uma estufa abandonada
+              começam a devolver memórias perdidas.
+            </p>
+            <p class="livro__tags">
+              <span class="tag">Fantasia</span>
+              <span class="tag tag--verde">Estreia</span>
+            </p>
+          </div>
+          <div class="livro__compra">
+            <p class="livro__preco">R$ 59,90</p>
+            <p class="livro__vendas">151 vendidos</p>
+            <a class="botao" href="#">Ver detalhes</a>
+          </div>
+        </li>
+
+        <li class="livro">
+          <span class="livro__posicao">06</span>
+          <div class="capa capa--terra capa--pequena" aria-hidden="true">
+            <span class="capa__titulo">Café da Manhã em Lisboa</span>
+            <span class="capa__autor">J. Peixoto</span>
+          </div>
+          <div class="livro__info">
+            <h3 class="livro__titulo">Café da Manhã em Lisboa</h3>
+            <p class="livro__autor">Joana Peixoto</p>
+            <p class="livro__resumo">
+              Crônicas de viagem sobre padarias, pastéis e conversas de
+              esquina do outro lado do Atlântico.
+            </p>
+            <p class="livro__tags">
+              <span class="tag">Crônicas</span>
+              <span class="tag">Viagem</span>
+            </p>
+          </div>
+          <div class="livro__compra">
+            <p class="livro__preco">R$ 44,00</p>
+            <p class="livro__vendas">138 vendidos</p>
+            <a class="botao" href="#">Ver detalhes</a>
+          </div>
+        </li>
+
+        <li class="livro">
+          <span class="livro__posicao">07</span>
+          <div class="capa capa--cinza capa--pequena" aria-hidden="true">
+            <span class="capa__titulo">A Última Estante</span>
+            <span class="capa__autor">D. Vilela</span>
+          </div>
+          <div class="livro__info">
+            <h3 class="livro__titulo">A Última Estante</h3>
+            <p class="livro__autor">Diego Vilela</p>
+            <p class="livro__resumo">
+              Um livreiro descobre que todos os exemplares vendidos numa
+              certa quinta-feira voltaram para a loja sozinhos.
+            </p>
+            <p class="livro__tags">
+              <span class="tag">Suspense</span>
+              <span class="tag">Nacional</span>
+            </p>
+          </div>
+          <div class="livro__compra">
+            <p class="livro__preco">R$ 49,90</p>
+            <p class="livro__vendas">127 vendidos</p>
+            <a class="botao" href="#">Ver detalhes</a>
+          </div>
+        </li>
+
+        <li class="livro">
+          <span class="livro__posicao">08</span>
+          <div class="capa capa--verde capa--pequena" aria-hidden="true">
+            <span class="capa__titulo">Chá das Cinco com Fantasmas</span>
+            <span class="capa__autor">H. Braga</span>
+          </div>
+          <div class="livro__info">
+            <h3 class="livro__titulo">Chá das Cinco com Fantasmas</h3>
+            <p class="livro__autor">Helena Braga</p>
+            <p class="livro__resumo">
+              Humor e assombração em doses iguais: uma casa de chá inglesa
+              onde os clientes antigos nunca foram embora.
+            </p>
+            <p class="livro__tags">
+              <span class="tag">Humor</span>
+              <span class="tag tag--verde">Estreia</span>
+            </p>
+          </div>
+          <div class="livro__compra">
+            <p class="livro__preco">R$ 46,90</p>
+            <p class="livro__vendas">119 vendidos</p>
+            <a class="botao" href="#">Ver detalhes</a>
+          </div>
+        </li>
+
+        <li class="livro">
+          <span class="livro__posicao">09</span>
+          <div class="capa capa--azul capa--pequena" aria-hidden="true">
+            <span class="capa__titulo">Pequeno Atlas de Lugares Calmos</span>
+            <span class="capa__autor">A. Rios</span>
+          </div>
+          <div class="livro__info">
+            <h3 class="livro__titulo">Pequeno Atlas de Lugares Calmos</h3>
+            <p class="livro__autor">André Rios</p>
+            <p class="livro__resumo">
+              Sessenta refúgios silenciosos pelo Brasil, cada um com um livro
+              sugerido para ler no lugar.
+            </p>
+            <p class="livro__tags">
+              <span class="tag">Ensaio</span>
+              <span class="tag">Ilustrado</span>
+            </p>
+          </div>
+          <div class="livro__compra">
+            <p class="livro__preco">R$ 68,00</p>
+            <p class="livro__vendas">104 vendidos</p>
+            <a class="botao" href="#">Ver detalhes</a>
+          </div>
+        </li>
+
+        <li class="livro">
+          <span class="livro__posicao">10</span>
+          <div class="capa capa--laranja capa--pequena" aria-hidden="true">
+            <span class="capa__titulo">O Livreiro Distraído</span>
+            <span class="capa__autor">S. Marques</span>
+          </div>
+          <div class="livro__info">
+            <h3 class="livro__titulo">O Livreiro Distraído</h3>
+            <p class="livro__autor">Sofia Marques</p>
+            <p class="livro__resumo">
+              Comédia romântica sobre trocar acidentalmente o livro certo com
+              a pessoa errada — ou seria o contrário?
+            </p>
+            <p class="livro__tags">
+              <span class="tag">Romance</span>
+              <span class="tag tag--verde">Estreia</span>
+            </p>
+          </div>
+          <div class="livro__compra">
+            <p class="livro__preco">R$ 42,90</p>
+            <p class="livro__vendas">98 vendidos</p>
+            <a class="botao" href="#">Ver detalhes</a>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- ==================== TABELA RESUMO ==================== -->
+    <section class="resumo" aria-labelledby="titulo-resumo">
+      <h2 id="titulo-resumo" class="secao__titulo">Resumo do ranking</h2>
+      <p class="secao__subtitulo">Comparativo rápido entre os dez títulos do mês.</p>
+
+      <div class="tabela__area">
+        <table class="tabela">
+          <caption>Vendas de 1º a 30 de setembro — Livraria Café com Chá</caption>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Título</th>
+              <th scope="col">Gênero</th>
+              <th scope="col">Preço</th>
+              <th scope="col">Vendidos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>01</td><td>O Silêncio das Xícaras</td><td>Mistério</td><td>R$ 62,00</td><td>338</td></tr>
+            <tr><td>02</td><td>A Casa das Cem Janelas</td><td>Romance</td><td>R$ 54,90</td><td>217</td></tr>
+            <tr><td>03</td><td>Cartas para o Inverno</td><td>Poesia</td><td>R$ 39,90</td><td>186</td></tr>
+            <tr><td>04</td><td>Manual do Café Perfeito</td><td>Gastronomia</td><td>R$ 78,50</td><td>164</td></tr>
+            <tr><td>05</td><td>O Jardim de Vidro</td><td>Fantasia</td><td>R$ 59,90</td><td>151</td></tr>
+            <tr><td>06</td><td>Café da Manhã em Lisboa</td><td>Crônicas</td><td>R$ 44,00</td><td>138</td></tr>
+            <tr><td>07</td><td>A Última Estante</td><td>Suspense</td><td>R$ 49,90</td><td>127</td></tr>
+            <tr><td>08</td><td>Chá das Cinco com Fantasmas</td><td>Humor</td><td>R$ 46,90</td><td>119</td></tr>
+            <tr><td>09</td><td>Pequeno Atlas de Lugares Calmos</td><td>Ensaio</td><td>R$ 68,00</td><td>104</td></tr>
+            <tr><td>10</td><td>O Livreiro Distraído</td><td>Romance</td><td>R$ 42,90</td><td>98</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==================== CHAMADA FINAL ==================== -->
+    <section class="chamada">
+      <h2>Não encontrou o seu favorito?</h2>
+      <p>
+        A lista muda todo mês, mas as indicações do nosso livreiro não dependem
+        de ranking nenhum. Dá uma olhada no que a casa está servindo.
+      </p>
+      <a class="botao botao--claro" href="recomendacoes.html">Ver as Recomendações da Casa</a>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape__conteudo">
+      <div class="rodape__bloco">
+        <h3>Livraria Café com Chá</h3>
+        <p>Rua das Acácias, 128 — Centro<br>Aberto de terça a domingo, das 9h às 21h.</p>
+      </div>
+      <div class="rodape__bloco">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="best-sellers.html">Mais Vendidos</a></li>
+          <li><a href="recomendacoes.html">Recomendações da Casa</a></li>
+        </ul>
+      </div>
+      <div class="rodape__bloco">
+        <h3>Contato</h3>
+        <p>contato@cafecomcha.com.br<br>(11) 4002-8922</p>
+      </div>
+    </div>
+    <p class="rodape__creditos">
+      Projeto acadêmico da disciplina de Desenvolvimento Front-end — feito só com HTML e CSS.
+    </p>
+  </footer>
+
+</body>
+</html>

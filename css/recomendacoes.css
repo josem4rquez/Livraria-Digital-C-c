@@ -1,0 +1,753 @@
+/* =========================================================
+   Livraria Café com Chá — Página "Recomendações da Casa"
+   Disciplina: Desenvolvimento Front-end
+   Somente HTML e CSS (sem JavaScript e sem imagens externas)
+   ========================================================= */
+
+/* ---------- 1. Variáveis e reset ---------- */
+:root {
+  --cafe-escuro:  #3b2417;
+  --cafe-medio:   #6f4b32;
+  --creme:        #f7f1e7;
+  --creme-claro:  #fffdf9;
+  --dourado:      #c08a4a;
+  --verde-cha:    #6b7f5e;
+  --borda:        #e3d5c2;
+
+  --fonte-titulo: Georgia, 'Times New Roman', serif;
+  --fonte-texto:  'Segoe UI', Tahoma, Verdana, sans-serif;
+
+  --raio:   12px;
+  --sombra: 0 4px 14px rgba(59, 36, 23, 0.10);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  background-color: var(--creme);
+  color: var(--cafe-escuro);
+  line-height: 1.65;
+}
+
+img { max-width: 100%; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--verde-cha);
+  outline-offset: 3px;
+}
+
+/* ---------- 2. Cabeçalho e menu ---------- */
+.cabecalho {
+  background-color: var(--cafe-escuro);
+  border-bottom: 4px solid var(--dourado);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.cabecalho__conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--creme);
+}
+
+.logo__icone { font-size: 1.9rem; }
+
+.logo__texto {
+  font-family: var(--fonte-titulo);
+  font-size: 1.15rem;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+}
+
+.logo__texto strong {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dourado);
+  font-weight: normal;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.menu a {
+  color: var(--creme);
+  text-decoration: none;
+  font-size: 0.92rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.menu a:hover { background-color: rgba(247, 241, 231, 0.15); }
+
+.menu .menu__ativo {
+  background-color: var(--dourado);
+  color: var(--cafe-escuro);
+  font-weight: bold;
+}
+
+/* ---------- 3. Abertura ---------- */
+.abertura {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 20px 60px;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.abertura__etiqueta {
+  display: inline-block;
+  background-color: var(--verde-cha);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.7rem;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.abertura__titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 3.1rem;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.abertura__titulo::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 3px;
+  margin-top: 18px;
+  background-color: var(--dourado);
+  border-radius: 3px;
+}
+
+.abertura__resumo {
+  max-width: 520px;
+  margin: 20px 0 28px;
+  color: var(--cafe-medio);
+  font-size: 1.03rem;
+}
+
+/* Xícara desenhada só com CSS */
+.abertura__xicara {
+  display: flex;
+  justify-content: center;
+}
+
+.xicara {
+  position: relative;
+  width: 200px;
+  height: 210px;
+}
+
+.xicara__corpo {
+  position: absolute;
+  bottom: 34px;
+  left: 30px;
+  width: 130px;
+  height: 100px;
+  background: linear-gradient(160deg, #fffdf9, #e8dbc8);
+  border: 3px solid var(--cafe-escuro);
+  border-radius: 12px 12px 60px 60px;
+}
+
+.xicara__corpo::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  height: 16px;
+  background: linear-gradient(90deg, #6b4526, #97643a);
+  border-radius: 50%;
+}
+
+.xicara__corpo::after {
+  content: "";
+  position: absolute;
+  right: -46px;
+  top: 20px;
+  width: 46px;
+  height: 46px;
+  border: 3px solid var(--cafe-escuro);
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+.xicara__pires {
+  position: absolute;
+  bottom: 16px;
+  left: 6px;
+  width: 180px;
+  height: 20px;
+  background: linear-gradient(180deg, #efe3d2, #d9c8b0);
+  border: 3px solid var(--cafe-escuro);
+  border-radius: 0 0 40px 40px;
+}
+
+.xicara__vapor,
+.xicara__vapor::before,
+.xicara__vapor::after {
+  position: absolute;
+  width: 8px;
+  height: 46px;
+  background-color: rgba(111, 75, 50, 0.28);
+  border-radius: 999px;
+}
+
+.xicara__vapor {
+  top: 20px;
+  left: 90px;
+}
+
+.xicara__vapor::before {
+  content: "";
+  left: -26px;
+  top: 12px;
+  height: 34px;
+}
+
+.xicara__vapor::after {
+  content: "";
+  left: 26px;
+  top: 6px;
+  height: 40px;
+}
+
+/* ---------- 4. Títulos de seção ---------- */
+.secao__titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.secao__titulo::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin: 12px auto 0;
+  background-color: var(--dourado);
+  border-radius: 3px;
+}
+
+.secao__subtitulo {
+  text-align: center;
+  color: var(--cafe-medio);
+  max-width: 620px;
+  margin: 14px auto 46px;
+}
+
+.secao__titulo--claro { color: var(--creme); }
+.secao__subtitulo--claro { color: #e2d5c4; }
+
+/* ---------- 5. Capas desenhadas em CSS ---------- */
+.capa {
+  width: 190px;
+  height: 275px;
+  border-radius: 4px 10px 10px 4px;
+  box-shadow: 0 8px 22px rgba(59, 36, 23, 0.22);
+  border-left: 10px solid rgba(0, 0, 0, 0.28);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fdf6ec;
+  flex-shrink: 0;
+  transform: rotate(-2deg);
+  transition: transform 0.3s;
+}
+
+.indicacao:hover .capa { transform: rotate(0deg) scale(1.03); }
+
+.capa__titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.capa__autor {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.capa--vinho   { background: linear-gradient(150deg, #7d2b3a, #4a1622); }
+.capa--verde   { background: linear-gradient(150deg, #5c7355, #2f3f2c); }
+.capa--azul    { background: linear-gradient(150deg, #3b5a7a, #1e2f42); }
+.capa--laranja { background: linear-gradient(150deg, #c07a35, #7a4517); }
+
+/* ---------- 6. Indicações ---------- */
+.selecao {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+.indicacao {
+  background-color: var(--creme-claro);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 32px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.indicacao--invertida { flex-direction: row-reverse; }
+
+.indicacao__texto { flex: 1; }
+
+.indicacao__genero {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--verde-cha);
+  border-bottom: 2px solid var(--borda);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+.indicacao__titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.7rem;
+  font-weight: normal;
+}
+
+.indicacao__autor {
+  color: var(--cafe-medio);
+  font-style: italic;
+  font-size: 0.92rem;
+  margin-bottom: 12px;
+}
+
+.indicacao__sinopse { color: #55402f; }
+
+/* Bilhete de quem indicou */
+.bilhete {
+  position: relative;
+  background-color: #f4ebdd;
+  border-left: 4px solid var(--dourado);
+  border-radius: 0 var(--raio) var(--raio) 0;
+  padding: 20px 22px 18px 46px;
+  margin: 22px 0;
+}
+
+.bilhete::before {
+  content: "\201C";
+  position: absolute;
+  left: 14px;
+  top: 4px;
+  font-family: var(--fonte-titulo);
+  font-size: 3rem;
+  color: var(--dourado);
+  line-height: 1;
+}
+
+.bilhete p {
+  font-style: italic;
+  color: var(--cafe-medio);
+}
+
+.bilhete__assinatura {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--cafe-medio);
+}
+
+.bilhete__avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--cafe-escuro);
+  color: var(--creme);
+  font-family: var(--fonte-titulo);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bilhete__assinatura strong {
+  display: block;
+  color: var(--cafe-escuro);
+  font-size: 0.92rem;
+}
+
+.indicacao__rodape {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+}
+
+.preco {
+  font-family: var(--fonte-titulo);
+  font-size: 1.45rem;
+  color: var(--cafe-escuro);
+}
+
+/* ---------- 7. Botões ---------- */
+.botao {
+  display: inline-block;
+  background-color: var(--cafe-escuro);
+  color: var(--creme);
+  text-decoration: none;
+  font-family: var(--fonte-texto);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.botao:hover {
+  background-color: var(--dourado);
+  color: var(--cafe-escuro);
+}
+
+.botao--destaque {
+  background-color: var(--dourado);
+  color: var(--cafe-escuro);
+  font-weight: bold;
+  padding: 13px 26px;
+}
+
+.botao--destaque:hover { background-color: var(--cafe-escuro); color: var(--creme); }
+
+/* ---------- 8. Harmonizações ---------- */
+.harmonizacao {
+  background:
+    linear-gradient(135deg, rgba(59, 36, 23, 0.94), rgba(107, 127, 94, 0.88)),
+    repeating-linear-gradient(135deg, #4a2f1e 0 14px, #3b2417 14px 28px);
+  padding: 66px 20px;
+}
+
+.harmonizacao__interno {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.combos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.combo {
+  background-color: rgba(255, 253, 249, 0.96);
+  border-radius: var(--raio);
+  padding: 26px 22px;
+  text-align: center;
+  border-top: 5px solid var(--dourado);
+  transition: transform 0.25s;
+}
+
+.combo:hover { transform: translateY(-6px); }
+
+.combo__icone {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.combo__titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.15rem;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.combo__texto {
+  font-size: 0.9rem;
+  color: var(--cafe-medio);
+  margin-bottom: 14px;
+}
+
+.combo__preco {
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+  color: var(--cafe-escuro);
+}
+
+.combo__preco span {
+  display: block;
+  font-family: var(--fonte-texto);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--verde-cha);
+}
+
+/* ---------- 9. Clube de leitura ---------- */
+.clube {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 66px 20px;
+}
+
+.agenda { list-style: none; }
+
+.agenda__item {
+  background-color: var(--creme-claro);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 18px 22px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.agenda__data {
+  width: 66px;
+  flex-shrink: 0;
+  text-align: center;
+  background-color: var(--cafe-escuro);
+  color: var(--creme);
+  border-radius: 8px;
+  padding: 8px 0;
+}
+
+.agenda__dia {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.agenda__mes {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--dourado);
+}
+
+.agenda__info { flex: 1; }
+
+.agenda__info h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.15rem;
+  font-weight: normal;
+}
+
+.agenda__info p {
+  font-size: 0.87rem;
+  color: var(--cafe-medio);
+}
+
+.agenda__estado {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.agenda__estado--aberto   { background-color: var(--verde-cha); color: #fff; }
+.agenda__estado--poucas   { background-color: var(--dourado);   color: var(--cafe-escuro); }
+.agenda__estado--esgotado { background-color: #d8ccbc;          color: var(--cafe-medio); }
+
+/* ---------- 10. Assinatura (newsletter) ---------- */
+.assinatura {
+  background-color: var(--cafe-escuro);
+  color: var(--creme);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.assinatura h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.9rem;
+  font-weight: normal;
+}
+
+.assinatura p {
+  max-width: 520px;
+  margin: 12px auto 26px;
+  color: #e2d5c4;
+}
+
+.formulario {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.formulario__label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--dourado);
+  margin-bottom: 8px;
+}
+
+.formulario__linha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.formulario__campo {
+  flex: 1;
+  min-width: 220px;
+  font-family: var(--fonte-texto);
+  font-size: 0.95rem;
+  padding: 12px 16px;
+  border: 2px solid var(--borda);
+  border-radius: 999px;
+  background-color: var(--creme-claro);
+  color: var(--cafe-escuro);
+}
+
+.formulario__campo::placeholder { color: #a08b76; }
+
+.formulario__campo:focus {
+  border-color: var(--dourado);
+  outline: none;
+}
+
+/* ---------- 11. Rodapé ---------- */
+.rodape {
+  background-color: #2c1a11;
+  color: #ded0be;
+  padding: 46px 20px 24px;
+}
+
+.rodape__conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.rodape__bloco h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.05rem;
+  font-weight: normal;
+  color: var(--dourado);
+  margin-bottom: 10px;
+}
+
+.rodape__bloco p { font-size: 0.88rem; }
+
+.rodape__bloco ul { list-style: none; }
+
+.rodape__bloco li { margin-bottom: 6px; }
+
+.rodape__bloco a {
+  color: #ded0be;
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+
+.rodape__bloco a:hover {
+  color: var(--dourado);
+  text-decoration: underline;
+}
+
+.rodape__creditos {
+  max-width: 1100px;
+  margin: 30px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid #4a3123;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #a89482;
+}
+
+/* ---------- 12. Responsivo ---------- */
+
+/* Tablet */
+@media (max-width: 960px) {
+  .abertura {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .abertura__titulo::after { margin-left: auto; margin-right: auto; }
+  .abertura__resumo { margin-left: auto; margin-right: auto; }
+
+  .combos { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Celular */
+@media (max-width: 640px) {
+  .cabecalho__conteudo { justify-content: center; }
+  .menu { justify-content: center; }
+
+  .abertura__titulo { font-size: 2.2rem; }
+
+  .indicacao,
+  .indicacao--invertida {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 26px 20px;
+  }
+
+  .capa { transform: rotate(0deg); }
+
+  .indicacao__rodape { justify-content: center; }
+
+  .bilhete { text-align: left; }
+
+  .combos { grid-template-columns: 1fr; }
+
+  .agenda__item {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .rodape__conteudo { grid-template-columns: 1fr; text-align: center; }
+}
